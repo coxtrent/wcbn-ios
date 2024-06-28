@@ -72,33 +72,37 @@ struct ContentView: View {
                 HStack {
                     // First button
                     Button(action: {
-                        print("Kill youreslves")
+                        print("Random button 1 pressed")
                     }) {
                         ZStack {
                             Image("coin")
                                 .resizable()
                                 .frame(width: 102.4, height: 70)
-                            Text("die")
+                            Text("Button 1")
                                 .foregroundColor(Color(white: 1))
                         }
                     } // End First Button
                     .padding()
                     // Second button
                     Button(action: {
-                        print("Kill youreslves")
+                        print("Random button 2 pressed")
                     }) {
                         Image("coin2")
                             .resizable()
                             .frame(width: 102.4, height: 70)
+                        Text("Button 2")
+                            .foregroundColor(Color(white: 1))
                     } // End Second Button
                     .padding()
                     // Third button
                     Button(action: {
-                        print("Kill youreslves")
+                        print("Random button 3 pressed")
                     }) {
                         Image("coin3")
                             .resizable()
                             .frame(width: 102.4, height: 70)
+                        Text("Button 3")
+                            .foregroundColor(Color(white: 1))
                     } // End Third Button
                     .padding()
                 }
