@@ -1,0 +1,2 @@
+## License
+I haven't figured out what type of license this should take yet, however all rights are reserved regarding WCBN and the University of Michigan and whatnot. However, this is open source for educational purposes. Eventually I will find a license that suits that.

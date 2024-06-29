@@ -24,8 +24,8 @@ After configuring Xcode and opening the project, choose a compatible simulation 
 
 ## Contributing
 
-#TODO: Finish this. Please read [CONTRIBUTING.md](https://github.com/coxtrent/wcbn-ios/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+See [CONTRIBUTING.md](https://github.com/coxtrent/wcbn-ios/CONTRIBUTING.md).
 
 ## License
 
-#TODO: Finish this. This project is licensed under the [LICENSE.md](LICENSE.md) file in the repository.
+I haven't figured out what type of license this should take yet, however all rights are reserved regarding WCBN and the University of Michigan and whatnot. However, this is open source for educational purposes. Eventually I will find a license that suits that. This project will then licensed under the [LICENSE.md](LICENSE.md) file in the repository.
