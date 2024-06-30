@@ -9,6 +9,7 @@ import SwiftUI
 
 
 /*TODO: Implement ScheduleView. 
+        * Surely this requires some sort of REST API.
         * Show the schedule of shows for the week
         * Organize by day, and organize days by time
         * Show Monday by default and provide the ability to tab through all days of the week
