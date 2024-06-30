@@ -7,12 +7,16 @@
 
 import SwiftUI
 
+
+/*TODO: Implement ScheduleView. 
+        * Show the schedule of shows for the week
+        * Organize by day, and organize days by time
+        * Show Monday by default and provide the ability to tab through all days of the week
+*/
 struct ScheduleView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Programming Schedule")
         Spacer()
-        .navigationBarBackButtonHidden(true)
-        NavBar()
     }
 }
 

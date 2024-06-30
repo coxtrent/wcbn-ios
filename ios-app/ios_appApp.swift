@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct ios_appApp: App {
+    var navigationStateManager = NavigationStateManager()
+    
     var body: some Scene {
         WindowGroup {
             RadioView()
+                .environmentObject(NavigationStateManager())
                 .environmentObject(AudioPlayerManager.shared) // instantiate audio player as @EnvironmentObject
         }
     }

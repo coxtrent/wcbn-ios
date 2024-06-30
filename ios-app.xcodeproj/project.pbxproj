@@ -20,6 +20,7 @@
 		355A55412C31012000D97122 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355A55402C31012000D97122 /* FavoritesView.swift */; };
 		355A55432C31014500D97122 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355A55422C31014500D97122 /* SettingsView.swift */; };
 		355A55452C3101A000D97122 /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355A55442C3101A000D97122 /* NavBar.swift */; };
+		355A55472C3113F200D97122 /* NavigationStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355A55462C3113F200D97122 /* NavigationStateManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		355A55402C31012000D97122 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		355A55422C31014500D97122 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		355A55442C3101A000D97122 /* NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBar.swift; sourceTree = "<group>"; };
+		355A55462C3113F200D97122 /* NavigationStateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStateManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				355A553E2C3100C800D97122 /* RecentView.swift */,
 				355A55402C31012000D97122 /* FavoritesView.swift */,
 				355A55422C31014500D97122 /* SettingsView.swift */,
+				355A55462C3113F200D97122 /* NavigationStateManager.swift */,
 				355A553C2C3100B000D97122 /* ScheduleView.swift */,
 				355A553A2C30F2C000D97122 /* AudioPlayerManager.swift */,
 				354CA8F72A67649700EB1F5E /* Assets.xcassets */,
@@ -282,6 +285,7 @@
 				355A55412C31012000D97122 /* FavoritesView.swift in Sources */,
 				355A553B2C30F2C100D97122 /* AudioPlayerManager.swift in Sources */,
 				355A553F2C3100C800D97122 /* RecentView.swift in Sources */,
+				355A55472C3113F200D97122 /* NavigationStateManager.swift in Sources */,
 				354CA8F42A67648E00EB1F5E /* ios_appApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

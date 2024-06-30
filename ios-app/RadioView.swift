@@ -14,6 +14,7 @@ import SwiftUI
 
 struct RadioView: View {
     @EnvironmentObject var audioPlayerManager: AudioPlayerManager
+    
     var body: some View {
         NavigationView {
             ZStack {
@@ -43,7 +44,10 @@ struct RadioView: View {
                         }
                     }
                     Spacer()
-                    NavBar()
+                    HStack {
+                        Spacer()
+                        NavBar()
+                    }
                 }
             }
             .onAppear {

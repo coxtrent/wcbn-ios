@@ -12,9 +12,11 @@ enum StreamQuality: String {
     }
 }
 
+
 class AudioPlayerManager: ObservableObject {
     static let shared = AudioPlayerManager()
     private var isPlaying_: Bool = false
+    private var streamQuality: StreamQuality = StreamQuality.hi
     private var player: AVPlayer?
 
     private init() {} // this creates a singleton instance
@@ -51,4 +53,14 @@ class AudioPlayerManager: ObservableObject {
     func isPlaying() -> Bool {
         return isPlaying_
     }
+
+    func changeQuality(quality: StreamQuality) {
+        if(streamQuality == quality) {
+            return
+        } else {
+            stopRadio()
+            streamQuality = quality
+            playRadio(from: quality.urlString)
+        }
+    } // End changeQuality
 }
