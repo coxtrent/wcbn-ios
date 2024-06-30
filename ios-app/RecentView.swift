@@ -8,10 +8,12 @@
 import SwiftUI
 
 /*TODO: Implement Recently played page.
-        * Show recently played songs, with artist, title, release and year, 
+        * Surely this will require the Spinitron REST API or some similar service it provides, otherwise this is not currently going to be possible.
+        * Show recently played songs, with artist, title, release and year,
             as well as the time and show it was played, and whose show it was
         * Show it back like 30-120 minutes or maybe the last 10 tracks, idk, decide.
         * Show current host.
+        
 */
 
 struct RecentView: View {

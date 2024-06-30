@@ -7,11 +7,16 @@
 
 import SwiftUI
 
-// No but seriously, these are provided by wcbn.org.
-// https://www.instagram.com/reel/C8DI98Po-dl/?igsh=MW9ubHlocnFiYTdrdA==
-
-
-
+/*TODO: Finish RadioView, a.k.a. the main view. A lot is still needed.
+        * Connect with the Spinitron REST API that presumably and surely must exist.
+            ... Where is the API Key?
+                And how does wcbn.org get the schedule? Ask Saima.
+ 
+        
+        * Use it to display the show name, DJ name, song information, and art.
+        * Add songs to recent, and clear out the most recently played stuff that's over 1 hour old
+        * Create a plan to maintain this app after I leave Ann Arbor
+ */
 struct RadioView: View {
     @EnvironmentObject var audioPlayerManager: AudioPlayerManager
     
