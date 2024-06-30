@@ -14,6 +14,7 @@ enum StreamQuality: String {
 
 class AudioPlayerManager: ObservableObject {
     static let shared = AudioPlayerManager()
+    private var isPlaying_: Bool = false
     private var player: AVPlayer?
 
     private init() {} // this creates a singleton instance
@@ -28,18 +29,26 @@ class AudioPlayerManager: ObservableObject {
         // play the radio
         player = AVPlayer(url: url)
         player?.play()
+        isPlaying_.toggle()
     } // End playRadio
 
     func stopRadio() {
         player?.pause()
         player = nil
+        isPlaying_.toggle()
     } // End stopRadio
 
     func resumeRadio() {
         player?.play()
+        isPlaying_.toggle()
     } // End resumeRadio
 
     func pauseRadio() {
         player?.pause()
+        isPlaying_.toggle()
     } // End pauseRadio
+    
+    func isPlaying() -> Bool {
+        return isPlaying_
+    }
 }
