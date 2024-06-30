@@ -2,7 +2,7 @@
 //  ios_appApp.swift
 //  ios-app
 //
-//  Created by Trenton Cox on 7/18/23.
+//  Created by Trenton Michael Cox on 7/18/23.
 //
 
 import SwiftUI
@@ -12,6 +12,7 @@ struct ios_appApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(AudioPlayerManager.shared) // instantiate audio player as @EnvironmentObject
         }
     }
 }

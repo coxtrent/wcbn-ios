@@ -14,6 +14,7 @@
 		354CA9052A67649800EB1F5E /* ios_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354CA9042A67649800EB1F5E /* ios_appTests.swift */; };
 		354CA90F2A67649800EB1F5E /* ios_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354CA90E2A67649800EB1F5E /* ios_appUITests.swift */; };
 		354CA9112A67649800EB1F5E /* ios_appUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354CA9102A67649800EB1F5E /* ios_appUITestsLaunchTests.swift */; };
+		355A553B2C30F2C100D97122 /* AudioPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355A553A2C30F2C000D97122 /* AudioPlayerManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		354CA90A2A67649800EB1F5E /* ios-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		354CA90E2A67649800EB1F5E /* ios_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_appUITests.swift; sourceTree = "<group>"; };
 		354CA9102A67649800EB1F5E /* ios_appUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_appUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		355A553A2C30F2C000D97122 /* AudioPlayerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayerManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				354CA8F32A67648E00EB1F5E /* ios_appApp.swift */,
 				354CA8F52A67648E00EB1F5E /* ContentView.swift */,
+				355A553A2C30F2C000D97122 /* AudioPlayerManager.swift */,
 				354CA8F72A67649700EB1F5E /* Assets.xcassets */,
 				354CA8F92A67649700EB1F5E /* Preview Content */,
 			);
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				354CA8F62A67648E00EB1F5E /* ContentView.swift in Sources */,
+				355A553B2C30F2C100D97122 /* AudioPlayerManager.swift in Sources */,
 				354CA8F42A67648E00EB1F5E /* ios_appApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -6,111 +6,119 @@
 //
 
 import SwiftUI
-import AVKit
 
-/*class AudioPlayerManager: ObservableObject {
-    static let shared = AudioPlayerManager()
-    var audioPlayer: AVAudioPlayer?
-    
-    func startBackgroundMusic() {
-        if let bundle = Bundle.main.path(forResource: "backgroundMusic", ofType: "mp3") {
-            let backgroundMusic = NSURL(fileURLWithPath: bundle)
-            do {
-                audioPlayer = try AVAudioPlayer(contentsOf: backgroundMusic as URL)
-                audioPlayer?.numberOfLoops = -1
-                audioPlayer?.prepareToPlay()
-                audioPlayer?.play()
-            } catch {
-                print("Error")
-            }
-        }
-    }
-} // End AudioPlayerManager
-*/
-
-class AudioPlayerManager: ObservableObject {
-    var player: AVAudioPlayer?
-
-    func playRadio(from url: URL) {
-        do {
-            player = try AVAudioPlayer(contentsOf: url)
-            player?.play()
-        } catch {
-            print("Error")
-        }
-    } // End playRadio
-
-    func resumeRadio() {
-        player?.play()
-    } // End resumeRadio
-
-    func stopRadio() {
-        player?.stop()
-    } // End stopRadio
-
-    func pauseRadio() {
-        player?.pause()
-    } // End pauseRadio
+// No but seriously, these are provided by wcbn.org.
+// https://www.instagram.com/reel/C8DI98Po-dl/?igsh=MW9ubHlocnFiYTdrdA==
 
 
-}
 
 struct ContentView: View {
+    @EnvironmentObject var audioPlayerManager: AudioPlayerManager
+    @State private var isPlaying = false
+
+
     var body: some View {
-        ZStack {
-            Color(red: 55/255, green: 32/255, blue: 62/255, opacity: 1)
-                .edgesIgnoringSafeArea(.all)
-            VStack {
-                Image("MainScreenLogo")
-                    .resizable()
-                    .frame(width: 102.4, height: 70)
-                    .padding()
-                Text("Hello, WBCN-FM Ann Arbor!")
-                    .foregroundColor(Color(red: 238/255, green: 140/255, blue: 39/255, opacity: 1))
-                    .font(.custom("Helvetica Neue", size: 30))
-                Spacer()
-                HStack {
-                    // First button
+        NavigationView {
+            ZStack {
+                Color(red: 55/255, green: 32/255, blue: 62/255, opacity: 1)
+                    .edgesIgnoringSafeArea(.all)
+                VStack {
+                    Image("MainScreenLogo")
+                        .resizable()
+                        .frame(width: 102.4, height: 70)
+                        .padding()
+                    Text("WBCN-FM Ann Arbor")
+                        .foregroundColor(Color(red: 238/255, green: 140/255, blue: 39/255, opacity: 1))
+                        .font(.custom("Helvetica Neue", size: 30))
                     Button(action: {
-                        print("Random button 1 pressed")
-                    }) {
-                        ZStack {
-                            Image("coin")
-                                .resizable()
-                                .frame(width: 102.4, height: 70)
-                            Text("Button 1")
-                                .foregroundColor(Color(white: 1))
+                        if isPlaying {
+                            print("Pausing radio")
+                            audioPlayerManager.pauseRadio()
+                        } else {
+                            print("Resuming radio")
+                            audioPlayerManager.resumeRadio()
                         }
-                    } // End First Button
-                    .padding()
-                    // Second button
-                    Button(action: {
-                        print("Random button 2 pressed")
-                    }) {
-                        Image("coin2")
-                            .resizable()
-                            .frame(width: 102.4, height: 70)
-                        Text("Button 2")
-                            .foregroundColor(Color(white: 1))
-                    } // End Second Button
-                    .padding()
-                    // Third button
-                    Button(action: {
-                        print("Random button 3 pressed")
-                    }) {
-                        Image("coin3")
-                            .resizable()
-                            .frame(width: 102.4, height: 70)
-                        Text("Button 3")
-                            .foregroundColor(Color(white: 1))
-                    } // End Third Button
-                    .padding()
+                        isPlaying.toggle()
+                        }) {
+                        VStack {
+                            Image("sunCoin")
+                                .resizable()
+                                .frame(width: 300, height: 300)
+                            Text(isPlaying ? "Playing" : "Paused")
+                        }
+                    }
+
+                    Spacer()
+                    HStack {
+                        // First button
+                        Button(action: {
+                            print("Schedule button pressed")
+                        }) {
+                            ZStack {
+                                Image("coin")
+                                    .resizable()
+                                    .frame(width: 50, height: 50)
+                                Text("Schedule")
+                                    .foregroundColor(Color(white: 1))
+                            }
+                        } // End First Button
+                        // Second button
+                        Button(action: {
+                            print("Recent button pressed")
+                        }) {
+                            ZStack {
+                                Image("coin2")
+                                    .resizable()
+                                    .frame(width: 50, height: 50)
+                                Text("Recent")
+                                    .foregroundColor(Color(white: 1))
+                            }
+                        } // End Second Button
+                        // Third button
+                        Button(action: {
+                            print("Radio button pressed")
+                        }) {
+                            ZStack {
+                                Image("coin3")
+                                    .resizable()
+                                    .frame(width: 50, height: 50)
+                                Text("Radio")
+                                    .foregroundColor(Color(white: 1))
+                            }
+                        } // End Third Button
+                        Button(action: {
+                            print("Favorites button pressed")
+                        }) {
+                            ZStack {
+                                Image("coin2")
+                                    .resizable()
+                                    .frame(width: 50, height: 50)
+                                Text("Favorites")
+                                    .foregroundColor(Color(white: 1))
+                            }
+                        } // End Fourth Button
+                        Button(action: {
+                            print("Settings button pressed")
+                        }) {
+                            ZStack {
+                                Image("coin")
+                                    .resizable()
+                                    .frame(width: 50, height: 50)
+                                Text("Settings")
+                                    .foregroundColor(Color(white: 1))
+                            }
+                        } // End Fifth Button
+                    }
                 }
             }
+            .onAppear {
+                audioPlayerManager.playRadio(from: StreamQuality.hi.urlString)
+                isPlaying = true
+            }
+            
+            
+            
         }
-        
-        
-        
     }
 }
 
